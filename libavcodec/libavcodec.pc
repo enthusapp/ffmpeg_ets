@@ -1,0 +1,14 @@
+prefix=/home/pi/ffmpeg_build
+exec_prefix=${prefix}
+libdir=/home/pi/ffmpeg_build/lib
+includedir=/home/pi/ffmpeg_build/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.35.100
+Requires: libswresample >= 3.3.100, libavutil >= 56.22.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -pthread -lm -L/usr/lib/arm-linux-gnueabihf -lz -lmp3lame -lm -lopus -lm -lvorbis -lm -logg -lvorbisenc -lvorbis -lm -logg -lx264 -lpthread -lm -ldl -lva
+Libs.private: 
+Cflags: -I${includedir}
